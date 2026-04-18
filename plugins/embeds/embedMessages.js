@@ -155,7 +155,7 @@ module.exports = async function ({ config, bot, formats }) {
       }
     }
   }
-  
+
   // Do auto-value checks on boot instead of once every message
   const systemName = settings.get(SETTING_NAMES.CUSTOM_SYSTEM_NAME).toLowerCase() === "$botname" ? bot.user.username : settings.get(SETTING_NAMES.CUSTOM_SYSTEM_NAME);
 
@@ -184,7 +184,11 @@ module.exports = async function ({ config, bot, formats }) {
   const replyToUserFormatter = function (threadMessage) {
     const userId = threadMessage.user_id;
     const roleName = threadMessage.role_name || config.fallbackRoleName || "";
-    const embed = { description: threadMessage.body, color: settings.get(SETTING_NAMES.STAFF_REPLY_DM_COLOR) };
+    const embed = {
+      title: "Message Sent",
+      description: threadMessage.body,
+      color: settings.get(SETTING_NAMES.STAFF_REPLY_DM_COLOR),
+    };
 
     if (!threadMessage.is_anonymous) {
       embed.author = {
@@ -227,6 +231,7 @@ module.exports = async function ({ config, bot, formats }) {
     const userId = threadMessage.user_id;
     const roleName = threadMessage.role_name || config.fallbackRoleName || "";
     const embed = {
+      title: "Message Sent",
       description: threadMessage.body,
       color: settings.get(SETTING_NAMES.STAFF_REPLY_THREAD_COLOR),
       footer: { text: `#${threadMessage.message_number}` },
@@ -271,7 +276,11 @@ module.exports = async function ({ config, bot, formats }) {
 
   const userReplyFormatter = function (threadMessage) {
     const userId = threadMessage.user_id;
-    const embed = { description: threadMessage.body, color: settings.get(SETTING_NAMES.USER_REPLY_THREAD_COLOR) };
+    const embed = {
+      title: "Message Received",
+      description: threadMessage.body,
+      color: settings.get(SETTING_NAMES.USER_REPLY_THREAD_COLOR),
+    };
 
     embed.author = {
       name: `${threadMessage.user_name}`,
@@ -361,7 +370,7 @@ module.exports = async function ({ config, bot, formats }) {
         embed.description += `\n${link}`;
       }
     }
-    
+
     if (config.threadTimestamps) {
       embed.timestamp = moment().utc().toISOString();
     }
@@ -406,7 +415,7 @@ module.exports = async function ({ config, bot, formats }) {
       embed.timestamp = moment().utc().toISOString();
     }
 
-    return { content: properMentions.join(" "), embed, allowedMentions: {users: true, roles: true, everyone: true} };
+    return { content: properMentions.join(" "), embed, allowedMentions: { users: true, roles: true, everyone: true } };
   };
 
   // Reset the pfpMap every hour or so, we dont want outdated pfp's to stay forever
