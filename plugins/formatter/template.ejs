@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma-prefers-dark" />
+
+    <style>
+      html {
+        word-wrap: break-word;
+      }
+      .message.compact {
+        margin-bottom: 0.5em;
+      }
+      .message-body {
+        padding: 0.5em 0.75em;
+      }
+      .message-header-compact {
+        padding-bottom: 0.5em;
+        color: white;
+      }
+      .message-header-compact .timestamp {
+        color: #b5b5b5;
+      }
+
+      @media (prefers-color-scheme: light) {
+        .message-header-compact {
+          color: black;
+        }
+        .message-header-compact .timestamp {
+          color: #4a4a4a;
+        }
+      }
+    </style>
+    <script>
+      function imageErrorHandler(element, text) {
+        const span = document.createElement("span");
+        span.textContent = text;
+        element.replaceWith(span);
+      }
+    </script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h1 class="title"><%= title %></h1>
+        <h6 class="subtitle is-6 timestamp" data="<%= timestamp %>" functor="toString">
+          <%= timestamp %>
+        </h6>
+        <div class="block">
+          <table class="table is-bordered is-narrow is-fullwidth is-hoverable">
+            <tbody>
+              <% for (const [key, value] of Object.entries(metadata)) { %>
+              <tr>
+                <% if (Array.isArray(value)) { %>
+                <th><%= key %></th>
+                <td>
+                  <div class="tags">
+                    <%- value.map(e => `<span class="tag">${e}</span
+                    >`).join("") %>
+                  </div>
+                </td>
+                <% } else { %>
+                <th><%= key %></th>
+                <td><%= value %></td>
+                <% } %>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+          <div class="is-flex is-flex-direction-row is-flex-wrap-wrap">
+            <% messageTypes.forEach((messageType) => { %>
+              <div class="px-4 py-2">
+                <label class="checkbox">
+                  <input type="checkbox" checked onclick="filterMessageType(this)" data-message-type="<%= messageType %>" />
+                  <%= messageType %>
+                </label>
+              </div>
+            <% }) %>
+          </div>
+        </div>
+        <% messages.forEach((message) => { %>
+          <article class="message compact is-hoverable <%= message.colour %>" data-message-type="<%= message.type_mapping %>">
+            <div class="message-body">
+              <p class="message-header-compact"><small><strong><%= message.header %></strong></small> <small><small><small><span class="timestamp" data="<%= message.timestamp %>" functor="toLocaleString"><%= message.timestamp %></span></small></small></small></p>
+              <%- message.content.replace(/\n/g, "<br>") %>
+              <% if (message.attachments.length) { %>
+                <% message.attachments.forEach((attachment, i) => { %>
+                  <br>
+                  <a href="<%- attachment %>">
+                    <img src="<%- attachment %>" onerror="imageErrorHandler(this, 'Attachment <%= i + 1 %>')" />
+                  </a>
+                <% }); %>
+              <% } %>
+            </div>
+          </article>
+        <% }) %>
+      </div>
+    </section>
+    <script>
+      document.querySelectorAll(".timestamp").forEach(e => {
+        e.innerHTML = new Date(e.innerHTML.trim())[e.getAttribute("functor")]();
+      });
+    </script>
+    <script>
+      function filterMessageType(checkbox) {
+        document.querySelectorAll("article.message").forEach(e => {
+          if (e.dataset.messageType === checkbox.dataset.messageType) {
+            e.style.display = (checkbox.checked) ? "block" : "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

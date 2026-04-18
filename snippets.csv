@@ -1,0 +1,149 @@
+trigger,body,created_by,created_at
+hi,"Hello, how can we help?",208661865344139264,2022-01-04 02:43:35
+thank,"Thank you for bringing this issue to our attention. We've initiated an investigation based on your provided information, and we'll take appropriate action based on our findings. Please let us know if there’s anything else you need. 
+
+*Note*: We are unable to share the specifics of the action taken for privacy reasons.",208661865344139264,2022-04-08 18:40:12
+troll,"As stated in the message that was sent, you are under restriction as a result of spamming the raid channel. Using the raid channels for anything but posting a legitimate raid, or posting a fake raid, is not allowed as expressly stated in Rule 3 of the Server Rules listed in <#447138518981017600>.
+
+As a proud Discord Partner, we strive to uphold our commitment to quality. We serve over 200,000 players worldwide and have a zero-tolerance policy for this. 
+
+The consequence is a __48-hour mute__. Future instances of this can lead to a ban.",208661865344139264,2022-07-04 14:14:53
+patreon,"Thank you for your interest in supporting us! 
+
+**Best Friend**
+*Patreon subscription, $7.50 USD per month*
+• Patron Badge and role
+• Exclusive access to the Patreon channels on Discord
+• Exclusive access to the limited Patreon Raid Channels on Discord
+• Exclusive access to Patreon only giveaways!
+• Exclusive access to Streaming in VC 
+
+*Note*: Discord's ToS and our server rules will, of course, still apply to you.
+
+You can sign up here: 
+https://www.patreon.com/PoGORemoteRaids
+
+Please let us know if you have any additional questions!",208661865344139264,2022-07-30 03:47:11
+patreonhelp,"If you have recently subscribed, thank you for supporting us!
+
+Most commonly answered questions are covered in <#825424496776577024> 
+
+The most common issue is not connecting your Discord account with Patreon account. The link to do this is here - <https://www.patreon.com/settings/apps>",482690934908125185,2022-09-06 20:31:01
+errors,"`​`​`​css
+Common Slash Errors`​`​`​
+<a:TDex:852261416479752223> **This interaction failed**
+*The bot didn’t acknowledge the interaction in the time allotted.*
+
+__Why?__
+• The sign-up period is over.
+• There is heavy traffic and the bot can’t respond in time. 
+• Your Discord client is out of date.
+
+__What do I do?__
+• Be sure your client is updated and clear cache. 
+• Keep joining raids.
+
+<a:TDex:852261416479752223> **Invalid form body**
+*Issue with the Discord library the bot is using.*
+
+__Why?__
+• Your Discord client is out of date.
+
+__What do I do?__
+• Be sure your client is updated and clear cache. 
+• Reinstall if the problem persists.
+
+<a:TDex:852261416479752223> **The application did not respond**
+*Limitations of bot usage.* 
+
+__Why?__
+• Incorrect command usage in the channel.
+• Rate limitation. 
+• Shards are restarting. 
+
+__What do I do?__
+• Use commands in the appropriate channels. 
+
+<a:TDex:852261416479752223> **Nothing happened**
+
+__Why?__
+• Raid is full but message hasn’t updated.
+• Raid post is old.
+
+__What do I do?__
+• Join other raids. 
+
+*Please do not ping staff for these issues.*",482690934908125185,2022-11-25 14:32:46
+badraid,"I'm sorry to hear you had a poor raid experience. That is not the type of service we are trying to provide. We expect members to follow instructions and highly encourage all members not to host or join a raid lobby unless they participate. Unfortunately, there are some things out of our control.
+
+We genuinely hope to prevent this situation in the future and will follow up with this user. Please note that we cannot share the specifics of the action taken for privacy reasons.",208661865344139264,2022-11-26 01:11:59
+profile,"**To update your profile, please use the slash commands below in <#761976769733066792> and follow the prompts:**
+
+`​/in-game-name-set`​ [sets your in-game name]
+`​/trainer-code-set`​ [sets your trainer-code]
+`​/level-set`​ [sets your level]
+`​/team-set`​ [sets your team] 
+
+To view your profile, use `​/trainer-profile-show`​​​
+
+**Please use one command at a time!**",482690934908125185,2023-01-07 13:13:53
+verify,"To start, please go to <#761976769733066792>, and issue the slash command `​​​/verify`​​​. The bot will ask you a series of questions regarding your Pokémon Go account (e.g. your trainer-code and in-game name).
+
+**If you type in an error, keep going! You can fix this later.**
+
+If you need to update something once the verification process is complete, please use the commands below to update your profile: 
+*Please use one command at a time*
+
+`​​​/in-game-name-set`​​​ [sets your in-game name]
+`​​​/trainer-code-set`​​​ [sets your trainer-code]
+`​​​/level-set`​​​ [sets your level]
+`​​​/team-set`​​​ [sets your team] 
+
+To view your profile, use `​​​/trainer-profile-show`​​​
+
+**Note**: The bot will NEVER ask you for your login information!",482690934908125185,2023-01-07 13:16:48
+app,"Hello and thank you for your interest in joining the PoGO Raids staff. Please fill out this application in order to be considered for a position on the team.
+
+Respond to this message and let us know when it is complete. 
+
+Best of luck! 
+https://dyno.gg/form/45754e86",208661865344139264,2023-01-13 02:33:38
+rr,"Please head over to <#761976464220225576> to review the process on joining and hosting remote raids in the server. If you have any questions after that, feel free to reach out. Thanks!",482690934908125185,2023-01-14 14:27:25
+slashraid,"With Slash Commands, all you have to do is type a slash “/” to bring up a list of available commands. 
+
+*Do not type the command and press enter, you have to select the command from the menu.*",482690934908125185,2023-01-19 20:03:26
+channels,"Make sure you have your discord set to show all channels as shown in the GIF below. 
+https://cdn.discordapp.com/attachments/1104775496178356244/1131763434220965989/show_all_.gif",541610267159691279,2023-07-23 21:00:34
+report,"Who is the user you wish to report? Please include the four digits after their name, e.g., Pikachu#0025, and detailed information about the incident. If you have any screenshots or the raid thread ID available, which is posted by <@1160313819944464515> at the top of the raid thread, it will help us in our investigation.",541610267159691279,2024-02-01 00:04:34
+incense,"Hello, <#854826817416462376> is a channel dedicated to starting incense in <@716390085896962058>. Here are some helpful things to know:
+
+- Using an incense spawns **180** Pokémon at a rate of one every __20 seconds__ for a total of __1 hour__ of consecutive catching.
+- One incense costs **50 shards**, or **10,000 PC**. 
+- You can buy shards by using <@716390085896962058> buy shards {amount}. 
+- You can buy an incense by using <@716390085896962058> buy incense. 
+
+It is worth noting that when incense is bought, it starts immediately. It is not stored and you don't get to choose when to use it, once bought it will start in the channel you bought it immediately.",208661865344139264,2024-02-06 16:25:31
+raidpass,"Hello there! Depending on the raid pass, there are different ways to obtain them:
+
+**Orange Daily Pass**
+- This pass is granted once per day when spinning a gym stop. You can only have one at a time in your inventory.
+
+**Green Premium Raid Pass**
+- These can be bought in boxes or stacks with Pokécoins in the shop in Pokémon Go or earned in certain special/limited research tasks.
+
+**Pink/Purple Remote Raid Pass**
+- Bought with Pokécoins in boxes or stacks from the shop in Pokémon Go. They also have a small chance to be given from the *Weekly Research Breakthrough Box* as a reward.",208661865344139264,2024-02-06 16:29:08
+nochannel,"No problem! This might help: 
+
+## Don't have access to the raid channels?
+<#1019028381997727744> ⁠
+<#1111040792874729623>
+
+This can be due to 3 reasons: 
+
+ A.  You need to verify with our <@1009566315549307031> by typing `/verify` in <#761976769733066792> 
+ B. You have to clear your cache. 
+      i. Follow these instructions: `App settings > Advanced > turn on developer mode > press back > scroll down > clear cache`
+ C. You need to select “show all channels” in your settings for this server (see attached)
+
+https://cdn.discordapp.com/attachments/1104775496178356244/1131763434220965989/show_all_.gif?ex=65cebdd5&is=65bc48d5&hm=d00c9877dfbda6a0d2e22a8a0a8885a597a75fb5cf9c7c8a5b6da07c69808e93&",208661865344139264,2024-02-06 16:50:44
