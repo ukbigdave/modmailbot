@@ -27,7 +27,22 @@ module.exports = ({ bot, knex, config, commands, hooks }) => {
 
     const channel = await getOrFetchChannel(bot, msg.channel.id);
     let userThreads = await threads.getClosedThreadsByUserId(userId);
-
+    
+        // Soul's insert
+    let member = bot.guilds.get(msg.guildID).members.get(userId);
+    if (!member) {
+      try {
+        member = await bot.getRESTGuildMember(msg.guildID, userId);
+      } catch (e) {
+        msg.channel.createMessage("I could not find that member");
+        return;
+      }
+    }
+		if (member.permissions.has("manageMessages") && !msg.member.permissions.has("administrator")) {
+      msg.channel.createMessage("You cannot view the logs of a staff, please contact an Admin.");
+      return;
+    }
+    
     // Descending by date
     userThreads.sort((a, b) => {
       if (a.created_at > b.created_at) return -1;
