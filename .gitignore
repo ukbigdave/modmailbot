@@ -1,10 +1,24 @@
-/.vscode
-/.idea
-/node_modules
-/welcome.png
-/update.sh
+# IDE / editor
+.vscode/
+.idea/
 
-# Config files
-/config.*
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Runtime / generated data
+logs/
+attachments/
+db/
+
+# Environment / secrets
+.env
+
+# Config files (ignore real configs, keep examples)
+config.*
 *.config.ini
-!/config.example.ini
+!config.example.ini
+
+# Misc
+welcome.png
+update.shsnippets.csv
